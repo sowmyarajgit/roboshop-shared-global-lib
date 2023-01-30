@@ -44,4 +44,10 @@ common.email("Failed")
    
 }
 }
+catch(Exception e) {
+   // Do something with the exception 
+
+common.email("Failed")
+   
+}
 }
