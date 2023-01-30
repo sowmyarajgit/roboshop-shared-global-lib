@@ -16,7 +16,9 @@ pipeline {
     }
     stage ('unittest') {
         steps {
-            echo 'unittest'
+            script{
+                common.unittest()
+            }
         }
 
     }
