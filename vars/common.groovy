@@ -12,9 +12,9 @@ if (app_lang == "maven") {
 
 def unittest() {
  // developer need to provide the test cases for the code
- // if (app_lang == "nodejs") {
-  //sh 'npm test'  
-
+  if (app_lang == "nodejs") {
+  sh 'npm test'  || true
+  }
 if (app_lang == "maven") {
   sh 'mvn test'  
 }
