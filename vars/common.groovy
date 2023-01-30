@@ -25,6 +25,6 @@ if (app_lang == "python") {
 }
 
 def email(email_notes){
-
-  mail bcc: '', body: 'yes', cc: '', from: 'sowmyaraj435@gmail.com', replyTo: '', subject: 'Test from jenkins', to: 'sowmyaraj435@gmail.com'
+sh 'env'
+  mail bcc: '', body: 'JOB FAILED', cc: '', from: 'sowmyaraj435@gmail.com', replyTo: '', subject: 'Test from jenkins', to: 'sowmyaraj435@gmail.com'
 }
