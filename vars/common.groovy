@@ -14,6 +14,7 @@ def unittest() {
  // developer need to provide the test cases for the code
   if (app_lang == "nodejs") {
   sh 'npm test'
+  sh 'env'
    }
 if (app_lang == "maven") {
   sh 'mvn test'  
@@ -25,6 +26,6 @@ if (app_lang == "python") {
 }
 
 def email(email_notes){
-sh 'env'
+
   mail bcc: '', body: 'JOB FAILED', cc: '', from: 'sowmyaraj435@gmail.com', replyTo: '', subject: 'Test from jenkins', to: 'sowmyaraj435@gmail.com'
 }
