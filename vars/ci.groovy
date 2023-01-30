@@ -1,5 +1,5 @@
 def call() {
-
+try{
     
 pipeline {
     agent {
@@ -36,5 +36,12 @@ pipeline {
     }
  } 
 
+}
+catch(Exception e) {
+   // Do something with the exception 
+
+error "Program failed, please read logs..."
+   
+}
 }
 }
