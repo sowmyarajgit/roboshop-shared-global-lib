@@ -28,7 +28,7 @@ pipeline {
         SONAR_PASS ='$(aws ssm get-parameters --region us-east-1 --names sonarqube_pass --query Parameters[0].Value --with-decryption | sed \'s/"//g\')'
     }
         steps {
-            sh  'sonar-scanner -Dsonar.host.url=http://172.31.4.194:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectkey=cart'
+            sh  "sonar-scanner -Dsonar.host.url=http://172.31.4.194:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectkey=cart"
     }
         }
 
