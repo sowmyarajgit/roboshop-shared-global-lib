@@ -29,10 +29,10 @@ pipeline {
     }
         steps {
             sh  'sonar-scanner -Dsonar.host.url=http://172.31.4.194:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectkey=cart'
-}
+    }
         }
 
-    }
+    
     stage ('upload file to centalized place') {
         steps {
             echo 'upload file to centralized place'
@@ -47,7 +47,7 @@ pipeline {
 catch(Exception e) {
    // Do something with the exception 
 
-common.email("Failed")
+  common.email("Failed")
    
 }
 }
