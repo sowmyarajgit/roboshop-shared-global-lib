@@ -29,7 +29,7 @@ pipeline {
     }
         steps {
             wrap([$class: 'MaskPasswordsBuildWrapper', varPasswordPairs: [[password: "${SONAR_PASS}", var: 'PASSWORD']]]){
-            sh  "sonar-scanner -Dsonar.host.url=http://172.31.4.194:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectkey=cart"
+            sh  "sonar-scanner -Dsonar.host.url=http://172.31.3.81:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectkey=cart"
     }
         }
 
